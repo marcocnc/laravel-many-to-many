@@ -12,7 +12,6 @@
                 </th>
                 <th scope="col">Name</th>
                 <th scope="col">Tipo di progetto</th>
-                <th scope="col">Technologies</th>
                 <th scope="col">Start</th>
                 <th scope="col">End</th>
                 <th scope="col">Dettagli</th>
@@ -29,7 +28,6 @@
                     <td>{{$post['id']}}</td>
                     <td>{{$post['name']}}</td>
                     <td><span class="badge text-bg-success">{{$post->type?->name}}</span></td>
-                    <td>{{$post['technologies']}}</td>
                     @php
                         $start_date = date_create($post->start);
                         $end_date = date_create($post->end);
