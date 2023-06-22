@@ -63,6 +63,21 @@
             </div>
 
             <div class="mb-3">
+                <p>Tecnologie usate</p>
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                    @foreach ($technologies as $technology)
+                        <input
+                        type="radio"
+                        class="btn-check"
+                        name="btnradio"
+                        id="tag{{$loop->iteration}}"
+                        autocomplete="off"
+                        value="{{$technology->id}}">
+                        <label class="btn btn-outline-primary" for="btnradio1">{{$technology->name}}</label>
+                    @endforeach
+            </div>
+
+            <div class="mb-3">
                 <label class="form-label">Descrizione</label>
                 <textarea
                 type="text"

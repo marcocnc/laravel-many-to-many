@@ -67,11 +67,19 @@
                         <input
                         type="radio"
                         class="btn-check"
-                        name="btnradio"
-                        id="tag{{$loop->iteration}}"
+                        name="technologies[]"
+                        id="tech{{$loop->iteration}}"
                         autocomplete="off"
-                        value="{{$technology->id}}">
-                        <label class="btn btn-outline-primary" for="btnradio1">{{$technology->name}}</label>
+                        value="{{$technology->id}}"
+
+                        @if (!$errors->any() && $technologies->contains($technology))
+                            checked
+                        @elseif ($errors->any() && in_array($technology->id, old('technologies', [])))
+                            checked
+                        @endif
+
+                        >
+                        <label class="btn btn-outline-primary" for="tech{{$loop->iteration}}">{{$technology->name}}</label>
                     @endforeach
             </div>
 

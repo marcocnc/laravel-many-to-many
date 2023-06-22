@@ -99,8 +99,9 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
+        $technologies = Technology::all();
         $types = Type::all();
-        return view('admin.posts.edit', compact('post', 'types'));
+        return view('admin.posts.edit', compact('post', 'types', 'technologies'));
     }
 
     /**

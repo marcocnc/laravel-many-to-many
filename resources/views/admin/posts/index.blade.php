@@ -12,6 +12,7 @@
                 </th>
                 <th scope="col">Name</th>
                 <th scope="col">Tipo di progetto</th>
+                <th scope="col">Technologie usate</th>
                 <th scope="col">Start</th>
                 <th scope="col">End</th>
                 <th scope="col">Dettagli</th>
